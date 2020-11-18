@@ -23,7 +23,7 @@ public class Casino
     
     public static void main(String[] args)
     {
-        // stores player's game selection
+        // stores the player's game selection
         int game;
         
         // instantiate objects
