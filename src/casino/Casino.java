@@ -22,11 +22,11 @@ public class Casino
     private static Player player;
     private static Scanner scan;
     
-    private static CasinoUI ui;
+    private static CasinoUi ui;
     
     public static void main(String[] args)
     {
-          ui = new CasinoUI(new Casino());
+          ui = new CasinoUi(new Casino());
 //        // stores the player's game selection
 //        int game;
 //        
