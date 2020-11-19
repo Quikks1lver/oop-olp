@@ -5,6 +5,7 @@ import java.util.Scanner;
 import scratchOffs.ScratchOffs;
 import slots.Slots;
 import constants.Constants;
+import userInterface.CasinoUi;
 
 /**
  * @author quikks1lver / Adam F
