@@ -158,7 +158,7 @@ public class SlotsUi extends JPanel
     {
         if (player.getCash() < Constants.BET)
         {
-            JOptionPane.showMessageDialog(null, "You're out of cash, sorry :/");
+            JOptionPane.showMessageDialog(null, "Not enough cash, sorry :/");
             return SPIN_FAILURE;
         }
         
