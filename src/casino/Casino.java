@@ -5,6 +5,7 @@ import java.util.Scanner;
 import scratchOffs.ScratchOffs;
 import slots.Slots;
 import constants.Constants;
+import userInterface.CasinoUi;
 
 /**
  * @author quikks1lver / Adam F
@@ -21,35 +22,39 @@ public class Casino
     private static Player player;
     private static Scanner scan;
     
+    private static CasinoUi ui;
+    
     public static void main(String[] args)
     {
-        // stores the player's game selection
-        int game;
-        
-        // instantiate objects
-        scan = new Scanner(System.in);
-        player = new Player();
-        
-        game = displayMenu();
-        
-        // Only instantiate the game object that the user wants to play
-        switch (game)
-        {
-            case Constants.BLACK_JACK:
-                blackJack = new BlackJack(player);
-                blackJack.play();
-                break;
-            case Constants.SCRATCH:
-                scratchers = new ScratchOffs(player);
-                scratchers.play();
-                break;
-            case Constants.SLOTS:
-                slots = new Slots(player);
-                slots.play();
-                break;
-            default:
-                System.out.println("Invalid game selection, try again");
-        }
+          player = new Player();
+          ui = new CasinoUi(new Casino());
+//        // stores the player's game selection
+//        int game;
+//        
+//        // instantiate objects
+//        scan = new Scanner(System.in);
+//        player = new Player();
+//        
+//        game = displayMenu();
+//        
+//        // Only instantiate the game object that the user wants to play
+//        switch (game)
+//        {
+//            case Constants.BLACK_JACK:
+//                blackJack = new BlackJack(player);
+//                blackJack.play();
+//                break;
+//            case Constants.SCRATCH:
+//                scratchers = new ScratchOffs(player);
+//                scratchers.play();
+//                break;
+//            case Constants.SLOTS:
+//                slots = new Slots(player);
+//                slots.play();
+//                break;
+//            default:
+//                System.out.println("Invalid game selection, try again");
+//        }
     }
     
     // Helper method: displays menu prompt
@@ -73,5 +78,61 @@ public class Casino
        } while (select < Constants.BLACK_JACK || select > Constants.SLOTS);
        
        return select;
+    }
+    
+    /**
+     * @return the blackJack
+     */
+    public static BlackJack getBlackJack() {
+        return blackJack;
+    }
+
+    /**
+     * @param aBlackJack the blackJack to set
+     */
+    public static void setBlackJack(BlackJack aBlackJack) {
+        blackJack = aBlackJack;
+    }
+
+    /**
+     * @return the scratchers
+     */
+    public static ScratchOffs getScratchers() {
+        return scratchers;
+    }
+
+    /**
+     * @param aScratchers the scratchers to set
+     */
+    public static void setScratchers(ScratchOffs aScratchers) {
+        scratchers = aScratchers;
+    }
+
+    /**
+     * @return the slots
+     */
+    public static Slots getSlots() {
+        return slots;
+    }
+
+    /**
+     * @param aSlots the slots to set
+     */
+    public static void setSlots(Slots aSlots) {
+        slots = aSlots;
+    }
+
+    /**
+     * @return the player
+     */
+    public static Player getPlayer() {
+        return player;
+    }
+
+    /**
+     * @param aPlayer the player to set
+     */
+    public static void setPlayer(Player aPlayer) {
+        player = aPlayer;
     }
 }
