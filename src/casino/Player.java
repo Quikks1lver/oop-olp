@@ -24,19 +24,19 @@ public class Player implements IPlayer
     // Custom constructor
     public Player()
     {
-        scan = new Scanner(System.in);
-        
-        // local variables for scanning into
-        String name;
-        int money;
-        
-        System.out.println("Enter player name");
-        name = scan.next();
-        System.out.println("Enter amount of money to play (minimum $10)");
-        money = scan.nextInt();
-        
-        setName(name);
-        setCash(money);
+//        scan = new Scanner(System.in);
+//        
+//        // local variables for scanning into
+//        String name;
+//        int money;
+//        
+//        System.out.println("Enter player name");
+//        name = scan.next();
+//        System.out.println("Enter amount of money to play (minimum $10)");
+//        money = scan.nextInt();
+//        
+//        setName(name);
+//        setCash(money);
     }
     
     @Override
