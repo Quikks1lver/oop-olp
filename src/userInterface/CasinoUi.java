@@ -72,9 +72,9 @@ public class CasinoUi implements ActionListener
         scratchers = new JButton(SCRATCH_OFFS);
         scratchers.addActionListener(this);
         
-//        buttonPanel.add(blackJack, BLACK_JACK);
-//        buttonPanel.add(slots, SLOTS);
-//        buttonPanel.add(scratchers, SCRATCH_OFFS);
+        buttonPanel.add(blackJack, BLACK_JACK);
+        buttonPanel.add(slots, SLOTS);
+        buttonPanel.add(scratchers, SCRATCH_OFFS);
         
         this.gamePanel = new JPanel();
         this.gamePanel.setLayout(cardLayout);
