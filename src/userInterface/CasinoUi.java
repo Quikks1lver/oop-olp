@@ -10,7 +10,6 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 /**
  * @author quikks1lver
@@ -80,8 +79,7 @@ public class CasinoUi implements ActionListener
         this.gamePanel = new JPanel();
         this.gamePanel.setLayout(cardLayout);
         this.gamePanel.setSize(new Dimension(300, 300));
-        Border gpBorder = BorderFactory.createTitledBorder("Games");
-        this.gamePanel.setBorder(gpBorder);
+        this.gamePanel.setBorder(BorderFactory.createTitledBorder("Games"));
         gamePanel.add(this.blackJackUi, BLACK_JACK);
         gamePanel.add(this.slotsUi, SLOTS);
         gamePanel.add(this.scratchOffsUi, SCRATCH_OFFS);
