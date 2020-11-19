@@ -35,7 +35,7 @@ public class PlayerUi extends JPanel
         
         this.setSize(new Dimension(200, 200));
         
-        this.setBorder(BorderFactory.createTitledBorder("Player Info"));
+        this.setBorder(BorderFactory.createTitledBorder(player.getName()));
         
         this.cashLabel = new JLabel("Cash Balance: $");
         
