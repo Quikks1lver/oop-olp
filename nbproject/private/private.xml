@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/scratchOffs/TenDollar.java</file>
-            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/scratchOffs/OneDollar.java</file>
-            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/scratchOffs/FiveDollar.java</file>
-            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/scratchOffs/ScratchOffs.java</file>
+            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/casino/Player.java</file>
+            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/userInterface/PlayerUi.java</file>
+            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/userInterface/CasinoUi.java</file>
+            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/userInterface/SlotsUi.java</file>
             <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/casino/Casino.java</file>
+            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/userInterface/ScratchOffsUi.java</file>
+            <file>file:/Users/quikks1lver/NetBeansProjects/Casino/src/userInterface/BlackJackUi.java</file>
         </group>
     </open-files>
 </project-private>
