@@ -39,6 +39,11 @@ public class SlotsUi extends JPanel
     private Random rand;
     private ArrayList<Integer> spinNums;
     
+    // i added some extra functionality -- if you don't have enough money,
+    // you cannot go into the negatives. These constants helps with this.
+    private static final int SPIN_SUCCESS = 1;
+    private static final int SPIN_FAILURE = 0;
+    
     // custom constructor
     public SlotsUi(Player player, CasinoUi casinoUi)
     {
@@ -144,13 +149,19 @@ public class SlotsUi extends JPanel
         @Override
         public void actionPerformed(ActionEvent e)
         {
-            spin();
-            results();
+            if (spin() == SPIN_SUCCESS) results();
         }
     }
     
-    private void spin()
+    // Spins the slots. If successful, returns a success flag, otherwise fail flag
+    private int spin()
     {
+        if (player.getCash() < Constants.BET)
+        {
+            JOptionPane.showMessageDialog(null, "You're out of cash, sorry :/");
+            return SPIN_FAILURE;
+        }
+        
         int num;
         
         player.setCash(player.getCash() - Constants.BET);
@@ -183,6 +194,8 @@ public class SlotsUi extends JPanel
         
         slotsPanel.revalidate();
         slotsPanel.repaint();
+        
+        return SPIN_SUCCESS;
     }
     
     private void results()
